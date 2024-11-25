@@ -1,0 +1,486 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Меню */
+header nav {
+    background: #333;
+    padding: 10px 20px;
+}
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    margin: 0 15px;
+}
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+.menu a.active,
+.menu a:hover {
+    color: #4CAF50;
+}
+
+/* Герой */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: #4CAF50;
+    color: white;
+}
+.hero-image {
+    max-width: 30%; /* Убедимся, что картинка не выходит за пределы контейнера */
+    height: auto; /* Сохраняем пропорции */
+    border-radius: 15px; /* Закруглённые углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень для объёма */
+    margin-top: 20px; /* Отступ сверху */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при наведении */
+}
+
+/* Анимация при наведении */
+.hero-image:hover {
+    transform: scale(1.05); /* Увеличение картинки */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Более глубокая тень */
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.hero .button {
+    display: inline-block;
+    background: white;
+    color: #4CAF50;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.hero .button:hover {
+    background: #333;
+    color: white;
+}
+
+/* Контент */
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+}
+.content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.content ul {
+    list-style: square;
+    padding-left: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    position: relative;
+}
+.fade-out {
+    animation: fadeOut 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-animation {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.scroll-animation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Контент */
+.content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    line-height: 1.8;
+    text-align: justify;
+}
+.content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Скролл-анимации */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.scroll-animation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Основная структура страницы */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Контент между хедером и футером */
+main {
+    flex: 1; /* Занимает всё доступное пространство */
+}
+
+/* Футер */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+}
+/* Фон для страницы "О технологии" */
+.background-image {
+    background-image: url('f1.jpg'); /* Укажите путь к вашему изображению */
+    background-size: cover; /* Масштабирование изображения */
+    background-position: center; /* Центрирование изображения */
+    background-attachment: fixed; /* Фон остаётся на месте при скролле */
+    min-height: 80vh; /* Минимальная высота равна высоте окна */
+    display: flex; /* Для центрирования содержимого */
+    align-items: center; /* По вертикали */
+    justify-content: center; /* По горизонтали */
+    color: white; /* Белый текст для контраста */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Тень для читаемости текста */
+}
+.background-image2 {
+    background-image: url('f2.jpg'); /* Укажите путь к вашему изображению */
+    background-size: cover; /* Масштабирование изображения */
+    background-position: center; /* Центрирование изображения */
+    background-attachment: fixed; /* Фон остаётся на месте при скролле */
+    min-height: 88.4vh; /* Минимальная высота равна высоте окна */
+    display: flex; /* Для центрирования содержимого */
+    align-items: center; /* По вертикали */
+    justify-content: center; /* По горизонтали */
+    color: rgb(255, 255, 255); /* Белый текст для контраста */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); /* Тень для читаемости текста */
+}
+/* Общие стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa; /* Нежный светлый фон */
+    color: #333; /* Темный текст */
+    overflow-x: hidden; /* Убирает горизонтальный скролл */
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.menu a:hover, .menu a.active {
+    color: #1abc9c; /* Цвет акцента */
+}
+
+/* Секция Hero */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 20px;
+    background: linear-gradient(to bottom, #1abc9c, #16a085);
+    color: white;
+    text-align: center;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 500px;
+    margin: 20px;
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #f39c12;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background: #e67e22;
+    transform: scale(1.1);
+}
+
+/* Картинка в секции Hero */
+.hero-image {
+    flex: 1;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Футер */
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Меню */
+header nav {
+    background: #333;
+    padding: 10px 20px;
+}
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    margin: 0 15px;
+}
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+.menu a.active,
+.menu a:hover {
+    color: #4CAF50;
+}
+
+/* Герой */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: #4CAF50;
+    color: white;
+}
+
+/* Картинка в секции Hero */
+.hero-image {
+    max-width: 30%; /* Убедимся, что картинка не выходит за пределы контейнера */
+    height: auto; /* Сохраняем пропорции */
+    border-radius: 15px; /* Закруглённые углы */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тень для объёма */
+    margin-top: 20px; /* Отступ сверху */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Анимация при наведении */
+}
+
+/* Анимация при наведении */
+.hero-image:hover {
+    transform: scale(1.05); /* Увеличение картинки */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Более глубокая тень */
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.cta-button {
+    display: inline-block;
+    background: white;
+    color: #4CAF50;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeInUp 1.4s ease-out forwards;
+}
+
+.cta-button:hover {
+    background: #333;
+    color: white;
+}
+
+/* Анимации для появления */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Скролл-анимации */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Футер */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeInUp 1.6s ease-out forwards;
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+/* Скрыть полосу прокрутки, но оставить возможность прокручивать */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;  /* Отключает стандартную прокрутку */
+}
+
+/* Для скрытия скроллбаров, но оставить прокрутку включённой */
+body::-webkit-scrollbar {
+    width: 0;  /* Скрывает вертикальный скроллбар */
+    height: 0;  /* Скрывает горизонтальный скроллбар */
+}
+
+/* Можно добавить скроллинг с помощью кастомных стилей */
+body {
+    overflow: auto;  /* Включает прокрутку, но скрывает саму полосу */
+}
